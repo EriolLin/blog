@@ -1,0 +1,8 @@
+server:
+  port: 9004
+
+mapper:
+  mappers:
+    - tk.mybatis.mapper.common.Mapper
+    - tk.mybatis.mapper.common.Mapper2
+  notEmpty: true
