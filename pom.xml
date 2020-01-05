@@ -26,6 +26,13 @@
 
 	<dependencies>
 
+		<!--druid 依赖-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.17</version>
+		</dependency>
+
 		<!-- swagger2 -->
 		<dependency>
 			<groupId>io.springfox</groupId>
