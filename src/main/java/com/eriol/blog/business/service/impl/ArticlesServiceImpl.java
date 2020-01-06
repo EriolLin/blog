@@ -16,19 +16,23 @@ public class ArticlesServiceImpl implements ArticlesService {
     @Autowired
     private ArticlesDao articlesDao;
 
-    public int insert(Articles entity){
+    @Override
+	public int insert(Articles entity){
         return articlesDao.insert(entity);
     }
 
-    public int deleteByPrimaryKey(int key){
+    @Override
+	public int deleteByPrimaryKey(int key){
         return articlesDao.deleteByPrimaryKey(key);
     }
 
-    public int updateByPrimaryKeySelective(Articles entity) {
+    @Override
+	public int updateByPrimaryKeySelective(Articles entity) {
         return articlesDao.updateByPrimaryKeySelective(entity);
     }
 
-    public List<Articles> selectAll(){
+    @Override
+	public List<Articles> selectAll(){
         return articlesDao.selectAll();
     }
 

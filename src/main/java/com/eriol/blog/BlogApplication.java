@@ -2,7 +2,6 @@ package com.eriol.blog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication(scanBasePackages = {"com.eriol.blog", "mapper"})
 public class BlogApplication {

@@ -24,8 +24,8 @@ public class ArticlesController {
         return new Result(true, StatusCode.OK, "删除成功", articlesService.deleteByPrimaryKey(Integer.parseInt(key)));
     }
 
-    @PutMapping("/updateByPrimaryKey")
-    public Result updateByPrimaryKey(@RequestBody Articles articles){
+    @PutMapping("/updateByPrimaryKeySelective")
+    public Result updateByPrimaryKeySelective(@RequestBody Articles articles){
         return new Result(true, StatusCode.OK, "更新成功", articlesService.updateByPrimaryKeySelective(articles));
     }
 
