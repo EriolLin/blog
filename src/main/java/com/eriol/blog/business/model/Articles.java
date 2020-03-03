@@ -68,6 +68,13 @@ public class Articles {
     private String articleTitle;
 
     /**
+     * 博文描述
+     */
+    @Column(name = "`article_describe`")
+    @ApiModelProperty("博文标题")
+    private String articleDescribe;
+
+    /**
      * 博文内容
      */
     @Column(name = "`article_content`")
@@ -101,6 +108,10 @@ public class Articles {
     public static final String ARTICLE_TITLE = "articleTitle";
 
     public static final String DB_ARTICLE_TITLE = "article_title";
+
+    public static final String ARTICLE_DESCRIBE = "articleDescribe";
+
+    public static final String DB_ARTICLE_DESCRIBE = "article_describe";
 
     public static final String ARTICLE_CONTENT = "articleContent";
 

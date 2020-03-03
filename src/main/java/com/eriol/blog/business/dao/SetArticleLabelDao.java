@@ -1,6 +1,6 @@
 package com.eriol.blog.business.dao;
 
-import com.eriol.blog.business.model.SetArtitleLabel;
+import com.eriol.blog.business.model.SetArticleLabel;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 */
 @Mapper
 @Repository
-public interface SetArtitleLabelDao extends tk.mybatis.mapper.common.Mapper<SetArtitleLabel> {
+public interface SetArticleLabelDao extends tk.mybatis.mapper.common.Mapper<SetArticleLabel> {
 
 }
 

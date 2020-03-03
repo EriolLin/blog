@@ -1,5 +1,6 @@
 package com.eriol.blog.business.controller;
 
+import com.eriol.blog.business.dto.ArtitleDto.Tinymce;
 import com.eriol.blog.business.model.Articles;
 import com.eriol.blog.business.service.ArticlesService;
 import com.eriol.blog.common.entity.Result;
@@ -34,6 +35,10 @@ public class ArticlesController {
         return new Result(true, StatusCode.OK, "查询成功", articlesService.selectAll());
     }
 
-
+    @PostMapping("/insertTinymce")
+    public Result insertTinymce(@RequestBody Tinymce tinymce){
+        articlesService.insertTinymce(tinymce);
+        return new Result(true, StatusCode.OK, "插入成功");
+    }
 
 }

@@ -10,36 +10,36 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eriol.blog.business.model.SetArtitleSort;
-import com.eriol.blog.business.service.SetArtitleSortService;
+import com.eriol.blog.business.model.SetArticleLabel;
+import com.eriol.blog.business.service.SetArticleLabelService;
 import com.eriol.blog.common.entity.Result;
 import com.eriol.blog.common.entity.StatusCode;
 
 @RestController
-@RequestMapping("/blog/setArtitleSort")
-public class SetArtitleSortController {
+@RequestMapping("/blog/setArticleLabel")
+public class SetArticleLabelController {
 	
 	@Autowired
-	private SetArtitleSortService setArtitleSortService;
+	private SetArticleLabelService setArticleLabelService;
 	
 	@PostMapping("/insert")
-    public Result insert(@RequestBody SetArtitleSort setArtitleSort){
-        return new Result(true, StatusCode.OK, "插入成功", setArtitleSortService.insert(setArtitleSort));
+    public Result insert(@RequestBody SetArticleLabel setArticleLabel){
+        return new Result(true, StatusCode.OK, "插入成功", setArticleLabelService.insert(setArticleLabel));
     }
 
     @DeleteMapping("/deleteByPrimaryKey/{key}")
     public Result delete(@PathVariable("key") String key){
-        return new Result(true, StatusCode.OK, "删除成功", setArtitleSortService.deleteByPrimaryKey(Integer.parseInt(key)));
+        return new Result(true, StatusCode.OK, "删除成功", setArticleLabelService.deleteByPrimaryKey(Integer.parseInt(key)));
     }
 
     @PutMapping("/updateByPrimaryKeySelective")
-    public Result updateByPrimaryKeySelective(@RequestBody SetArtitleSort setArtitleSort){
-        return new Result(true, StatusCode.OK, "更新成功", setArtitleSortService.updateByPrimaryKeySelective(setArtitleSort));
+    public Result updateByPrimaryKeySelective(@RequestBody SetArticleLabel setArticleLabel){
+        return new Result(true, StatusCode.OK, "更新成功", setArticleLabelService.updateByPrimaryKeySelective(setArticleLabel));
     }
 
     @GetMapping("/selectAll")
     public Result selectAll(){
-        return new Result(true, StatusCode.OK, "查询成功", setArtitleSortService.selectAll());
+        return new Result(true, StatusCode.OK, "查询成功", setArticleLabelService.selectAll());
     }
-	
+
 }

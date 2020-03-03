@@ -17,7 +17,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @ApiModel("")
 @Table(name = "`set_artitle_label`")
-public class SetArtitleLabel {
+public class SetArticleLabel {
     /**
      * 文章ID
      */
@@ -42,8 +42,8 @@ public class SetArtitleLabel {
     /**
      * 带默认值的实例
     */
-    public static SetArtitleLabel defaultInstance() {
-        SetArtitleLabel instance = new SetArtitleLabel();
+    public static SetArticleLabel defaultInstance() {
+        SetArticleLabel instance = new SetArticleLabel();
         return instance;
     }
 }

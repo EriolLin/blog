@@ -16,7 +16,7 @@ import com.eriol.blog.common.entity.Result;
 import com.eriol.blog.common.entity.StatusCode;
 
 @RestController
-@RequestMapping("/blog/setArtitleSort")
+@RequestMapping("/blog/sorts")
 public class SortsController {
 	
 	@Autowired
@@ -40,6 +40,11 @@ public class SortsController {
     @GetMapping("/selectAll")
     public Result selectAll(){
         return new Result(true, StatusCode.OK, "查询成功", sortsService.selectAll());
+    }
+
+    @GetMapping("/getSortOption")
+    public Result getSortOption(){
+        return new Result(true, StatusCode.OK, "查询成功", sortsService.sortOption().getChildren());
     }
 
 }

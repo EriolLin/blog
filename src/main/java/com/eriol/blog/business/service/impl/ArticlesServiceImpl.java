@@ -1,6 +1,7 @@
 package com.eriol.blog.business.service.impl;
 
 import com.eriol.blog.business.dao.ArticlesDao;
+import com.eriol.blog.business.dto.ArtitleDto.Tinymce;
 import com.eriol.blog.business.model.Articles;
 import com.eriol.blog.business.service.ArticlesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,12 @@ public class ArticlesServiceImpl implements ArticlesService {
     @Override
 	public List<Articles> selectAll(){
         return articlesDao.selectAll();
+    }
+
+    @Override
+    public void insertTinymce(Tinymce tinymce){
+        Articles article = new Articles();
+        System.out.println(tinymce);
     }
 
 }

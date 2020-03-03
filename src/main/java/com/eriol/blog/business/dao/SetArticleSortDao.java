@@ -1,6 +1,6 @@
 package com.eriol.blog.business.dao;
 
-import com.eriol.blog.business.model.SetArtitleSort;
+import com.eriol.blog.business.model.SetArticleSort;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 */
 @Mapper
 @Repository
-public interface SetArtitleSortDao extends tk.mybatis.mapper.common.Mapper<SetArtitleSort> {
+public interface SetArticleSortDao extends tk.mybatis.mapper.common.Mapper<SetArticleSort> {
 
 }
 

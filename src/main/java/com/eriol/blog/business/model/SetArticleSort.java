@@ -17,7 +17,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @ApiModel("")
 @Table(name = "`set_artitle_sort`")
-public class SetArtitleSort {
+public class SetArticleSort {
     /**
      * 文章ID
      */
@@ -46,8 +46,8 @@ public class SetArtitleSort {
     /**
      * 带默认值的实例
     */
-    public static SetArtitleSort defaultInstance() {
-        SetArtitleSort instance = new SetArtitleSort();
+    public static SetArticleSort defaultInstance() {
+        SetArticleSort instance = new SetArticleSort();
         return instance;
     }
 }
